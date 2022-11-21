@@ -1,0 +1,270 @@
+.global-map-wrap {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  z-index: -1;
+  opacity: 0;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.q-separator--horizontal {
+  transform: scaleY(0.85);
+}
+
+.q-separator--vertical {
+  transform: scaleX(0.85);
+}
+
+.q-layout {
+  .q-drawer-container {
+    .q-drawer--left {
+      transition: all .3s;
+    }
+  }
+
+  .q-page-container {
+    transition: all .3s;
+  }
+}
+
+.expand-nav .q-item {
+  min-height: 44px;
+  overflow: hidden;
+  height: 44px;
+}
+
+.expand-nav .q-expansion-item__container > .q-item > .q-item__section--avatar {
+  padding-right: 10px !important;
+  min-width: auto;
+}
+
+.expand-nav
+.q-expansion-item.nav-level1
+> .q-expansion-item__container
+> .q-item,
+.expand-nav .q-item.nav-level1 {
+  padding-left: 30px;
+}
+
+.expand-nav
+.q-expansion-item.nav-level2
+> .q-expansion-item__container
+> .q-item,
+.expand-nav .q-item.nav-level2 {
+  padding-left: 50px;
+}
+
+// 一级导航
+.expand-nav .active-nav.nav-level0 > .q-expansion-item__container > .q-item,
+.expand-nav .active-nav.nav-level0.q-item {
+  background-image: linear-gradient(
+      98deg,
+      rgba(22, 159, 255, 0.65),
+      #169fff 100%
+  );
+  box-shadow: 0 5px 10px -4px rgb(94 86 105 / 42%);
+  color: #fff;
+}
+
+.expand-nav
+.active-nav.nav-level0
+> .q-expansion-item__container
+> .q-item
+> .q-item__section
+> i {
+  color: #fff;
+}
+
+// 二级导航
+.expand-nav .active-nav.nav-level1 > .q-expansion-item__container > .q-item,
+.expand-nav .q-item.nav-level1.active-nav {
+  color: #169fff !important;
+  background: rgb(222, 236, 248);
+}
+
+.expand-nav
+.active-nav.nav-level1
+> .q-expansion-item__container
+> .q-item
+> .q-item__section
+> i {
+  color: #169fff;
+
+}
+
+// 三级导航
+.expand-nav .q-item.nav-level2.active-nav {
+  color: #169fff !important;
+  background: rgba(222, 236, 248, .6);
+}
+
+.popup-nav .q-item {
+  min-height: 44px;
+}
+
+.popup-nav .active-nav.q-item {
+  background-image: linear-gradient(
+      98deg,
+      rgba(22, 159, 255, 0.65),
+      #169fff 100%
+  );
+  box-shadow: 0 5px 10px -4px rgb(94 86 105 / 42%);
+  color: #fff;
+}
+
+
+.my-form-label {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-size: 14px;
+  color: #777;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.mx-datepicker,
+.mx-input-wrapper {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.mx-input-wrapper {
+  display: flex;
+  align-items: center;
+
+  input {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .mx-icon-calendar {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: translateY(0);
+  }
+}
+
+.mx-datepicker-popup {
+  z-index: 6000 !important;
+}
+
+.mx-input-wrapper input {
+  border: none !important;
+  color: rgba(0, 0, 0, .7);
+}
+
+.mx-input-wrapper input:focus-visible {
+  outline: none !important;
+}
+
+.mx-datepicker-popup {
+  transform: translateY(10px) !important;
+}
+
+.mx-calendar-range {
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+// 表格组件
+/* 表头 */
+.my-table .q-table > thead > tr > th {
+  font-size: 14px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  font-weight: 600;
+  color: #555;
+}
+
+/*表头第一个*/
+.my-table .q-table > thead > tr > th:first-child {
+  left: 0;
+  z-index: 4;
+}
+
+/*表头最后一个*/
+.my-table .q-table > thead > tr > th:last-child {
+  right: 0;
+}
+
+/* 表格组件所有td */
+.my-table .q-table > tbody > tr > td {
+  color: #666;
+  font-size: 14px;
+}
+
+.my-table .q-table > tbody > tr > td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background-color: #fff;
+}
+
+.my-table .q-table > tbody > tr > td:last-child {
+  position: sticky;
+  right: 0;
+  z-index: 2;
+  background-color: #fff;
+}
+
+.q-table__bottom {
+  background-color: #fafafa;
+  padding: 0;
+  min-height: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+// 通用页面css
+.select__content {
+  width: 260px !important;
+  max-height: 240px !important;
+}
+
+.tip-shadow {
+  height: 0;
+}
+
+.tip-shadow:after,
+.tip-shadow:before {
+  background-color: #fff;
+  content: "";
+  display: block;
+  height: 10px;
+  left: calc(50% - 6px);
+  position: absolute;
+  top: -6px;
+  transform: rotate(315deg);
+  width: 10px;
+}
+
+.tip-shadow:after {
+  box-shadow: 0 2px 2px #0000004d;
+  z-index: -1;
+}
+
+
+.q-field--outlined .q-field__control:before {
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+}
+
+.custom-tmap-zoomcontrol {
+  position: absolute;
+  left: 30px;
+  bottom: 40px;
+  z-index: 100;
+  .tmap-zoom-control{
+    margin: 0;
+  }
+}
+
+
